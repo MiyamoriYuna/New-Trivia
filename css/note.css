@@ -1,0 +1,109 @@
+
+/* =========================
+   ノート画面
+========================= */
+
+.search-box {
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #e2e9dc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box span {
+  font-size: 17px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #405b43;
+  font-size: 13px;
+}
+
+.search-box input::placeholder {
+  color: #a1aca0;
+}
+
+/* =========================
+   カテゴリー一覧
+========================= */
+
+.note-category-section h2 {
+  margin-bottom: 18px;
+  color: #426b4c;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 20px;
+}
+
+.note-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.note-category {
+  min-height: 85px;
+  padding: 15px 18px;
+  background: #ffffff;
+  border: 1px solid #e5eadf;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.note-category-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #f0f5eb;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.note-category h3 {
+  margin: 0 0 5px;
+  color: #426b4c;
+  font-size: 14px;
+}
+
+.note-category p {
+  margin: 0;
+  color: #899789;
+  font-size: 11px;
+}
+
+.note-category .arrow {
+  margin-left: auto;
+  color: #a5b5a2;
+  font-size: 25px;
+}
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 600px) {
+
+  .note-category {
+    padding: 13px;
+    gap: 12px;
+  }
+
+  .note-category-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+}
