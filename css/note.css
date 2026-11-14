@@ -107,3 +107,141 @@
   }
 
 }
+
+
+/* =========================
+   ノート画面のカテゴリー選択
+========================= */
+
+.note-category {
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.note-category.active {
+  background: #eaf1e4;
+  border-color: #9fba98;
+}
+
+.note-category:hover {
+  background: #f0f5eb;
+  border-color: #b4c9ae;
+}
+
+/* =========================
+   豆知識一覧
+========================= */
+
+.trivia-section {
+  margin-top: 35px;
+}
+
+.trivia-list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.trivia-list-heading h2 {
+  margin: 0;
+  color: #426b4c;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 20px;
+}
+
+.trivia-list-heading span {
+  color: #8a9a87;
+  font-size: 12px;
+}
+
+.trivia-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* 豆知識カード */
+
+.trivia-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5eadf;
+  border-radius: 16px;
+}
+
+.trivia-card-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.trivia-card-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background: #f0f5eb;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+}
+
+.trivia-card-info {
+  flex: 1;
+}
+
+.trivia-card-category {
+  color: #7b9a78;
+  font-size: 11px;
+}
+
+.trivia-card h3 {
+  margin: 5px 0 0;
+  color: #426b4c;
+  font-size: 15px;
+}
+
+.trivia-card-summary {
+  margin: 14px 0;
+  color: #778477;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* 詳細表示 */
+
+.trivia-card details {
+  border-top: 1px solid #edf0e9;
+  padding-top: 12px;
+}
+
+.trivia-card summary {
+  color: #648365;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.trivia-card-detail {
+  margin: 12px 0 0;
+  color: #647365;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* 検索結果がない場合 */
+
+.no-trivia {
+  padding: 35px 15px;
+  color: #8a9a87;
+  background: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
