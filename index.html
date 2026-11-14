@@ -203,89 +203,117 @@
 
 
     <!-- ノート画面 -->
-    <section id="note" class="page">
 
-      <div class="page-heading">
-        <p class="eyebrow">MY KNOWLEDGE NOTE</p>
-        <h1>知識のノート</h1>
-        <p>
-          気になった豆知識を見つけて、<br>
-          自分だけの知識ノートを作りましょう。
-        </p>
-      </div>
+<!-- ノート画面 -->
+<section id="note" class="page">
 
-      <!-- 検索欄 -->
-      <div class="search-box">
-        <span>🔍</span>
-        <input
-          type="text"
-          placeholder="豆知識を検索する"
-          disabled
-        >
-      </div>
+  <div class="page-heading">
+    <p class="eyebrow">MY KNOWLEDGE NOTE</p>
+    <h1>知識のノート</h1>
+    <p>
+      気になった豆知識を見つけて、<br>
+      自分だけの知識ノートを作りましょう。
+    </p>
+  </div>
 
-      <!-- カテゴリー一覧 -->
-      <section class="note-category-section">
-        <h2>カテゴリーから探す</h2>
+  <!-- 検索欄 -->
+  <div class="search-box">
+    <span>🔍</span>
+    <input
+      type="text"
+      id="trivia-search"
+      placeholder="豆知識を検索する"
+    >
+  </div>
 
-        <div class="note-category-list">
+  <!-- カテゴリー一覧 -->
+  <section class="note-category-section">
+    <h2>カテゴリーから探す</h2>
 
-          <div class="note-category">
-            <span class="note-category-icon">🐛</span>
-            <div>
-              <h3>昆虫</h3>
-              <p>虫の不思議な生態や特徴</p>
-            </div>
-            <span class="arrow">›</span>
-          </div>
+    <div class="note-category-list">
 
-          <div class="note-category">
-            <span class="note-category-icon">🌷</span>
-            <div>
-              <h3>植物</h3>
-              <p>花や木、植物のしくみ</p>
-            </div>
-            <span class="arrow">›</span>
-          </div>
-
-          <div class="note-category">
-            <span class="note-category-icon">🐾</span>
-            <div>
-              <h3>動物</h3>
-              <p>動物たちの暮らしや能力</p>
-            </div>
-            <span class="arrow">›</span>
-          </div>
-
-          <div class="note-category">
-            <span class="note-category-icon">🎵</span>
-            <div>
-              <h3>音楽</h3>
-              <p>音楽の歴史や楽器の知識</p>
-            </div>
-            <span class="arrow">›</span>
-          </div>
-
-          <div class="note-category">
-            <span class="note-category-icon">🎎</span>
-            <div>
-              <h3>伝統</h3>
-              <p>日本の文化や伝統行事</p>
-            </div>
-            <span class="arrow">›</span>
-          </div>
-
-          <div class="note-category">
-            <span class="note-category-icon">📖</span>
-            <div>
-              <h3>漢字</h3>
-              <p>漢字の読み方や由来</p>
-            </div>
-            <span class="arrow">›</span>
-          </div>
-
+      <button class="note-category active" data-category="すべて">
+        <span class="note-category-icon">🌳</span>
+        <div>
+          <h3>すべて</h3>
+          <p>すべての豆知識を見る</p>
         </div>
-      </section>
+        <span class="arrow">›</span>
+      </button>
+
+      <button class="note-category" data-category="昆虫">
+        <span class="note-category-icon">🐛</span>
+        <div>
+          <h3>昆虫</h3>
+          <p>虫の不思議な生態や特徴</p>
+        </div>
+        <span class="arrow">›</span>
+      </button>
+
+      <button class="note-category" data-category="植物">
+        <span class="note-category-icon">🌷</span>
+        <div>
+          <h3>植物</h3>
+          <p>花や木、植物のしくみ</p>
+        </div>
+        <span class="arrow">›</span>
+      </button>
+
+      <button class="note-category" data-category="動物">
+        <span class="note-category-icon">🐾</span>
+        <div>
+          <h3>動物</h3>
+          <p>動物たちの暮らしや能力</p>
+        </div>
+        <span class="arrow">›</span>
+      </button>
+
+      <button class="note-category" data-category="音楽">
+        <span class="note-category-icon">🎵</span>
+        <div>
+          <h3>音楽</h3>
+          <p>音楽の歴史や楽器の知識</p>
+        </div>
+        <span class="arrow">›</span>
+      </button>
+
+      <button class="note-category" data-category="伝統">
+        <span class="note-category-icon">🎎</span>
+        <div>
+          <h3>伝統</h3>
+          <p>日本の文化や伝統行事</p>
+        </div>
+        <span class="arrow">›</span>
+      </button>
+
+      <button class="note-category" data-category="漢字">
+        <span class="note-category-icon">📖</span>
+        <div>
+          <h3>漢字</h3>
+          <p>漢字の読み方や由来</p>
+        </div>
+        <span class="arrow">›</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- 豆知識一覧 -->
+  <section class="trivia-section">
+
+    <div class="trivia-list-heading">
+      <h2 id="trivia-list-title">すべての豆知識</h2>
+      <span id="trivia-result-count">0件</span>
+    </div>
+
+    <div id="trivia-list" class="trivia-list">
+      <!-- JavaScriptで豆知識を表示 -->
+    </div>
+
+  </section>
+
+</section>
+
 
       <p class="coming-soon">
         ※ 豆知識の一覧機能はこれから追加します。
@@ -319,6 +347,8 @@
 
   <!-- JavaScript -->
   <script src="js/common.js"></script>
+　<script src="js/trivia-data.js"></script>
+　<script src="js/note.js"></script>
 
 </body>
 </html>
