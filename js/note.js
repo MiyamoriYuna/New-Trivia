@@ -32,34 +32,58 @@ function displayTrivia() {
   // 豆知識を絞り込む
   const filteredTrivia = triviaData.filter(trivia => {
 
-    // カテゴリーが一致しているか
-    const categoryMatch =
+    // -------------------------
+    // 検索欄に文字が入力されている場合
+    // -------------------------
+
+    if (searchWord !== "") {
+
+      // カテゴリーに関係なく検索する
+      return (
+        trivia.title.toLowerCase().includes(searchWord) ||
+        trivia.summary.toLowerCase().includes(searchWord) ||
+        trivia.detail.toLowerCase().includes(searchWord)
+      );
+
+    }
+
+
+    // -------------------------
+    // 検索欄が空の場合
+    // -------------------------
+
+    // 選択中のカテゴリーで絞り込む
+    return (
       selectedCategory === "すべて" ||
-      trivia.category === selectedCategory;
-
-
-    // 検索文字が含まれているか
-    const searchMatch =
-      trivia.title.toLowerCase().includes(searchWord) ||
-      trivia.summary.toLowerCase().includes(searchWord) ||
-      trivia.detail.toLowerCase().includes(searchWord);
-
-
-    // 両方の条件を満たすものだけ表示
-    return categoryMatch && searchMatch;
+      trivia.category === selectedCategory
+    );
 
   });
 
 
+  // =========================
   // 見出しを変更
-  if (selectedCategory === "すべて") {
+  // =========================
+
+  if (searchWord !== "") {
+
+    listTitle.textContent = "検索結果";
+
+  } else if (selectedCategory === "すべて") {
+
     listTitle.textContent = "すべての豆知識";
+
   } else {
+
     listTitle.textContent = selectedCategory + "の豆知識";
+
   }
 
 
+  // =========================
   // 件数を表示
+  // =========================
+
   resultCount.textContent = filteredTrivia.length + "件";
 
 
@@ -67,7 +91,10 @@ function displayTrivia() {
   triviaList.innerHTML = "";
 
 
+  // =========================
   // 検索結果がない場合
+  // =========================
+
   if (filteredTrivia.length === 0) {
 
     triviaList.innerHTML = `
@@ -77,17 +104,23 @@ function displayTrivia() {
     `;
 
     return;
+
   }
 
 
+  // =========================
   // 豆知識を1件ずつ表示
+  // =========================
+
   filteredTrivia.forEach(trivia => {
 
+    // カードを作成
     const card = document.createElement("article");
 
     card.className = "trivia-card";
 
 
+    // カードの内容を設定
     card.innerHTML = `
       <div class="trivia-card-top">
 
@@ -123,6 +156,7 @@ function displayTrivia() {
     `;
 
 
+    // 一覧にカードを追加
     triviaList.appendChild(card);
 
   });
@@ -144,7 +178,9 @@ categoryButtons.forEach(button => {
 
     // すべてのカテゴリーの選択状態を解除
     categoryButtons.forEach(categoryButton => {
+
       categoryButton.classList.remove("active");
+
     });
 
 
@@ -166,6 +202,7 @@ categoryButtons.forEach(button => {
 
 searchInput.addEventListener("input", () => {
 
+  // カテゴリーに関係なく検索結果を表示
   displayTrivia();
 
 });
