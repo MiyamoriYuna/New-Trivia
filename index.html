@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>知識の森</title>
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/note.css">
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🌿</span>
+        <span>知識の森</span>
+      </div>
+
+      <p class="header-message">
+        毎日ひとつ、新しい発見。
+      </p>
+    </div>
+  </header>
+
+
+  <!-- メインコンテンツ -->
+  <main class="main-content">
+
+    <!-- ホーム画面 -->
+    <section id="home" class="page active">
+
+      <div class="welcome">
+        <p class="eyebrow">WELCOME TO KNOWLEDGE FOREST</p>
+        <h1>今日も森に、<br>新しい知識を。</h1>
+        <p>
+          小さな発見を積み重ねて、<br>
+          あなたの知識の森を育てましょう。
+        </p>
+      </div>
+
+      <!-- 知識の木 -->
+      <section class="tree-card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR KNOWLEDGE TREE</p>
+            <h2>あなたの知識の木</h2>
+          </div>
+          <span class="leaf-icon">🍃</span>
+        </div>
+
+        <div class="tree-illustration">
+          <div class="tree-crown">
+            <span>🍃</span>
+            <span>🌿</span>
+            <span>🍃</span>
+          </div>
+          <div class="tree-trunk"></div>
+          <div class="tree-ground"></div>
+        </div>
+
+        <p class="tree-description">
+          ひとつずつ知識を増やして、<br>
+          大きな木に育てていきましょう。
+        </p>
+      </section>
+
+      <!-- 学習記録 -->
+      <section class="stats-grid">
+
+        <div class="stat-card">
+          <span class="stat-icon">📚</span>
+          <p>覚えた豆知識</p>
+          <div class="stat-number">
+            <span id="learned-count">0</span>
+            <small>個</small>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-icon">🌱</span>
+          <p>連続学習日数</p>
+          <div class="stat-number">
+            <span id="streak-count">0</span>
+            <small>日</small>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 今日の豆知識 -->
+      <section class="today-card">
+        <p class="eyebrow">TODAY'S TRIVIA</p>
+        <h2>今日の豆知識</h2>
+
+        <div class="today-content">
+          <span class="today-icon">🌻</span>
+          <div>
+            <span class="category-label">植物</span>
+            <h3>ヒマワリは太陽の方向を向く？</h3>
+            <p>
+              成長中のヒマワリのつぼみは、
+              日光の方向に合わせて向きを変える性質があります。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- カテゴリー -->
+      <section class="category-section">
+        <p class="eyebrow">CATEGORIES</p>
+        <h2>知識のカテゴリー</h2>
+
+        <div class="category-chips">
+          <span>🐛 昆虫</span>
+          <span>🌷 植物</span>
+          <span>🐾 動物</span>
+          <span>🎵 音楽</span>
+          <span>🎎 伝統</span>
+          <span>📖 漢字</span>
+        </div>
+      </section>
+
+    </section>
+
+
+    <!-- クイズ画面 -->
+    <section id="quiz" class="page">
+
+      <div class="page-heading">
+        <p class="eyebrow">KNOWLEDGE QUIZ</p>
+        <h1>知識のクイズ</h1>
+        <p>
+          クイズに挑戦して、<br>
+          知識が身についているか確かめましょう。
+        </p>
+      </div>
+
+      <div class="quiz-intro">
+        <span class="quiz-intro-icon">🧠</span>
+        <h2>今日の知識を試してみよう！</h2>
+        <p>
+          カテゴリーを選んで、<br>
+          さっそくクイズに挑戦しましょう。
+        </p>
+      </div>
+
+      <section class="quiz-category-section">
+        <h2>カテゴリーを選ぶ</h2>
+
+        <div class="quiz-category-grid">
+
+          <div class="quiz-category">
+            <span>🐛</span>
+            <p>昆虫</p>
+          </div>
+
+          <div class="quiz-category">
+            <span>🌷</span>
+            <p>植物</p>
+          </div>
+
+          <div class="quiz-category">
+            <span>🐾</span>
+            <p>動物</p>
+          </div>
+
+          <div class="quiz-category">
+            <span>🎵</span>
+            <p>音楽</p>
+          </div>
+
+          <div class="quiz-category">
+            <span>🎎</span>
+            <p>伝統</p>
+          </div>
+
+          <div class="quiz-category">
+            <span>📖</span>
+            <p>漢字</p>
+          </div>
+
+        </div>
+      </section>
+
+      <p class="coming-soon">
+        ※ クイズ機能はこれから追加します。
+      </p>
+
+    </section>
+
+
+    <!-- ノート画面 -->
+    <section id="note" class="page">
+
+      <div class="page-heading">
+        <p class="eyebrow">MY KNOWLEDGE NOTE</p>
+        <h1>知識のノート</h1>
+        <p>
+          気になった豆知識を見つけて、<br>
+          自分だけの知識ノートを作りましょう。
+        </p>
+      </div>
+
+      <!-- 検索欄 -->
+      <div class="search-box">
+        <span>🔍</span>
+        <input
+          type="text"
+          placeholder="豆知識を検索する"
+          disabled
+        >
+      </div>
+
+      <!-- カテゴリー一覧 -->
+      <section class="note-category-section">
+        <h2>カテゴリーから探す</h2>
+
+        <div class="note-category-list">
+
+          <div class="note-category">
+            <span class="note-category-icon">🐛</span>
+            <div>
+              <h3>昆虫</h3>
+              <p>虫の不思議な生態や特徴</p>
+            </div>
+            <span class="arrow">›</span>
+          </div>
+
+          <div class="note-category">
+            <span class="note-category-icon">🌷</span>
+            <div>
+              <h3>植物</h3>
+              <p>花や木、植物のしくみ</p>
+            </div>
+            <span class="arrow">›</span>
+          </div>
+
+          <div class="note-category">
+            <span class="note-category-icon">🐾</span>
+            <div>
+              <h3>動物</h3>
+              <p>動物たちの暮らしや能力</p>
+            </div>
+            <span class="arrow">›</span>
+          </div>
+
+          <div class="note-category">
+            <span class="note-category-icon">🎵</span>
+            <div>
+              <h3>音楽</h3>
+              <p>音楽の歴史や楽器の知識</p>
+            </div>
+            <span class="arrow">›</span>
+          </div>
+
+          <div class="note-category">
+            <span class="note-category-icon">🎎</span>
+            <div>
+              <h3>伝統</h3>
+              <p>日本の文化や伝統行事</p>
+            </div>
+            <span class="arrow">›</span>
+          </div>
+
+          <div class="note-category">
+            <span class="note-category-icon">📖</span>
+            <div>
+              <h3>漢字</h3>
+              <p>漢字の読み方や由来</p>
+            </div>
+            <span class="arrow">›</span>
+          </div>
+
+        </div>
+      </section>
+
+      <p class="coming-soon">
+        ※ 豆知識の一覧機能はこれから追加します。
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- 下部メニュー -->
+  <nav class="bottom-nav">
+
+    <button class="nav-button active" data-page="home">
+      <span>🏠</span>
+      <small>ホーム</small>
+    </button>
+
+    <button class="nav-button" data-page="quiz">
+      <span>🧠</span>
+      <small>クイズ</small>
+    </button>
+
+    <button class="nav-button" data-page="note">
+      <span>📖</span>
+      <small>ノート</small>
+    </button>
+
+  </nav>
+
+
+  <!-- JavaScript -->
+  <script src="js/common.js"></script>
+
+</body>
+</html>
